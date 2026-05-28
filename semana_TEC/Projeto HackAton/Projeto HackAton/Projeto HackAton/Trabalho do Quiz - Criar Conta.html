@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>CRIAR CONTA</h1></center>
+    <form id="Criar" action="Trabalho do Quiz - Criar Conta.php" method="POST">
+        <div>
+            <center>
+            <p>Email</p>
+            <input placeholder="Digite Aqui seu EMAIL" type="email" name="EMAIL" id="gm">
+            <p>Senha</p>
+            <input type="password" placeholder="Digite Aqui sua NOVA SENHA" name="SENHA" id="key">
+            <p>Confirmar Senha</p>
+            <input type="password" placeholder="Confirme sua Senha Aqui." id="key2">
+            <p>Nome</p>
+            <input type="text" placeholder="Digite Aqui" name="NOME" id="nick">
+            </center>
+        </div>
+        <center><button type="submit">CRIAR</button></center>
+    </form>
+  
+   
+    <script>
+        var email = document.getElementById("gm")
+        var senha = document.getElementById("key")
+        var confirmeSenha = document.getElementById("key2")
+        var nome = document.getElementById("nick")
+        var verificacao = document.getElementById("Criar")
+
+        console.log(confirmeSenha.value)
+        console.log(senha.value)
+
+        verificacao.addEventListener('submit', function(event){
+           if((email.value.trim() === "") || (senha.value.trim() === "") || (nome.value.trim() === "") || (confirmeSenha.value.trim() === "")){
+            alert("EMAIL, SENHA ou NOME não Digitado.")
+            event.preventDefault();
+           }
+           if (confirmeSenha.value != senha.value){
+            alert("Senhas diferentes Detectadas")
+            event.preventDefault();
+            return;
+           }
+          
+        });  
+    </script>
+</body>
+</html>

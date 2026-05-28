@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>Login</h1></center>
+    <form id="Logar" method="POST" action="conection.php">
+        <div>
+            <center>
+            <p>Email</p>
+            <input placeholder="Digite Aqui" type="email" name="EMAIL" id="nick">
+            <p>Senha</p>
+            <input type="password" placeholder="Digite Aqui" name="SENHA" id="key">
+            <p>Nome</p>
+            <input type="text" placeholder="Digite Aqui" name="NOME" id="key">
+            </center>
+        </div>
+        <center><button type="submit">Logar</button></center>
+    </form>
+   
+    <script>
+        var email = document.getElementById("nick")
+        var senha = document.getElementById("key")
+        const verificacao = document.getElementById("Logar")
+
+        verificacao.addEventListener('submit', function(event){
+           if(email.value.trim() === "" || senha.value.trim() === ""){
+            alert("EMAIL ou SENHA não Digitado.")
+            event.preventDefault();
+           }
+        });  
+    </script>
+</body>
+</html>

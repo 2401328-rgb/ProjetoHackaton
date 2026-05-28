@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logim Aluno</title>
+    <link rel="stylesheet" href="css/logim.css">
+
+    
+</head>
+<body>
+    <h1>Login</h1>
+
+    <form id="Logar" method="POST" action="Trabalho do Quiz - Login.php">
+
+        <div class="centro">
+            
+            <p>Email</p>
+            <input placeholder="Digite Aqui" type="email" name="EMAIL" id="gm">
+            <p>Senha</p>
+            <input type="password" placeholder="Digite Aqui" name="SENHA" id="key">
+            <p>Nome</p>
+            <input type="text" placeholder="Digite Aqui" name="NOME" id="nick">
+            
+            <br>  <br>
+            <button type="submit">Logar</button><br><br>    
+          
+         </div>
+    </form>
+
+    <a href="CriarAluno.html">Registre-se</a>
+    
+   
+    <script>
+        var email = document.getElementById("gm")
+        var senha = document.getElementById("key")
+        var nome = document.getElementById("nick")
+        const verificacao = document.getElementById("Logar")
+
+        verificacao.addEventListener('submit', function(event){
+           if(email.value.trim() === "" || senha.value.trim() === "" || nome.value.trim() === ""){
+            alert("EMAIL, SENHA ou NOME não Digitado.")
+            event.preventDefault();
+           }
+        });  
+    </script>
+</body>
+</html>

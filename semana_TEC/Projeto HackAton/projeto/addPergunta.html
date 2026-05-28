@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD pergunta</title>
+    <link rel="stylesheet" href="css/logim.css">
+</head>
+<body>
+    <h1>Escreva sua Pergunta</h1>
+    <form id="Perguntas" action="Trabalho do Quiz - Respostas.php" type="submit">
+    <div class="centro">
+       
+           <p>Pergunta:</p>
+           
+           <input type="text" placeholder="Digite sua Pergunta Aqui:">
+           <p>Alternativa 1:</p>
+
+           <div class="lado">
+                <input type="radio" name="alter">
+                <input type="text" placeholder="Digite Aqui:">
+            </div>
+           <p>Alternativa 2:</p>
+
+           <div class="lado">
+                <input type="radio" name="alter">
+                <input type="text" placeholder="Digite Aqui:">
+            </div>
+
+           <p>Alternativa 3:</p>
+
+           <div class="lado">
+                <input type="radio" name="alter">
+                <input type="text" placeholder="Digite Aqui:">
+            </div>
+
+           <p>Alternativa 4:</p>
+
+           <div class="lado">
+                <input type="radio" name="alter">
+                <input type="text" placeholder="Digite Aqui:">
+            </div>
+           </BR><br>
+           <button  type="submit">Enviar Perguntas:</button>
+        
+    </div>
+    </form>
+
+    <script>
+        const respostas = document.getElementById('Perguntas');
+
+        respostas.addEventListener('submit', function(event){
+            const respoCor = respostas.querySelectorAll('input[name="alter"]:checked');
+           
+            
+            if(respoCor.length === 0){
+                alert('Nenhuma Alternativa Selecionada, Por Favor marque a Correta.')
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

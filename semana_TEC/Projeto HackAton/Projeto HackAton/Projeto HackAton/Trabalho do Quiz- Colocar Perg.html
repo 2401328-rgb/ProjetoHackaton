@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>Inscrever Perguntas</h1></center>
+    <form id="Perguntas" action="Trabalho do Quiz - Respostas.php" type="submit">
+    <div>
+        <center>
+           <p>Pergunta:</p>
+           <input type="text" placeholder="Digite sua Pergunta Aqui:">
+           <p>Alternativa 1:</p>
+           <input type="radio" name="alter">
+           <input type="text" placeholder="Digite Aqui:">
+           <p>Alternativa 2:</p>
+           <input type="radio" name="alter">
+           <input type="text" placeholder="Digite Aqui:">
+           <p>Alternativa 3:</p>
+           <input type="radio" name="alter">
+           <input type="text" placeholder="Digite Aqui:">
+           <p>Alternativa 4:</p>
+           <input type="radio" name="alter">
+           <input type="text" placeholder="Digite Aqui:"> 
+           </BR>
+           <button  type="submit">Enviar Perguntas:</button>
+        </center>
+    </div>
+    </form>
+    <script>
+        const respostas = document.getElementById('Perguntas');
+
+        respostas.addEventListener('submit', function(event){
+            const respoCor = respostas.querySelectorAll('input[name="alter"]:checked');
+           
+            
+            if(respoCor.length === 0){
+                alert('Nenhuma Alternativa Selecionada, Por Favor marque a Correta.')
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
